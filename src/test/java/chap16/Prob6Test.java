@@ -21,9 +21,11 @@ public class Prob6Test {
     assertEquals(3, app.getMinDiffOfArrays(arrA, arrB));
   }
 
+  @Test
   public void 두배열의_최소차_대상_구하기() {
-    int[] arr = app.getMinDiffNumsOfArrays();
-    assertEquals()
+    int[] arr = app.getNumsWithDiffFromArrays(arrA, arrB, app.getMinDiffOfArrays(arrA, arrB));
+    assertEquals(11, arr[0]);
+    assertEquals(8, arr[1]);
   }
 
 }
