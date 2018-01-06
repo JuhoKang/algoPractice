@@ -7,7 +7,8 @@ public class Prob16_5 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int number = sc.nextInt();
-    System.out.println(getZeroCount(createFactorial(number)));
+    //this is possible because always 2count > 5count
+    System.out.println(countFiveCountUnder(number));
   }
 
   public static long createFactorial(long num) {
@@ -24,6 +25,16 @@ public class Prob16_5 {
     while(num % 10 == 0) {
       count++;
       num /= 10;
+    }
+    return count;
+  }
+
+  public static int countFiveCountUnder(int num) {
+    int count = 0;
+    for(int i = num; i > 1; i--) {
+      if(i%5 == 0) {
+        count++;
+      }
     }
     return count;
   }

@@ -17,6 +17,9 @@ public class Prob16_5Test {
   @Test
   public void 앱테스트() {
     assertEquals(1, app.getZeroCount(app.createFactorial(5)));
+    assertEquals(1, app.countFiveCountUnder(5));
+    assertEquals(31, app.countFiveCountUnder(155));
+    //assertEquals(31, app.getZeroCount(app.createFactorial(155)));
   }
 
   @Test
@@ -27,6 +30,14 @@ public class Prob16_5Test {
   @Test
   public void 영갯수_맞는가() {
     assertEquals(2, app.getZeroCount(100));
+  }
+
+  @Test
+  public void 해당_숫자_아래의_오갯수_세기() {
+    assertEquals(0, app.countFiveCountUnder(4));
+    assertEquals(1, app.countFiveCountUnder(5));
+    assertEquals(3, app.countFiveCountUnder(15));
+    assertEquals(31, app.countFiveCountUnder(155));
   }
 
 }
