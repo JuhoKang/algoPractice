@@ -8,7 +8,6 @@ import org.junit.Test;
 public class Prob5Test {
 
   private Prob5 app;
-
   @Before
   public void init() {
     app = new Prob5();
