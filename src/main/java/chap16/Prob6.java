@@ -1,9 +1,15 @@
 package chap16;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Prob6 {
 
   public static void main(String[] args) {
-
+    final int[] arrA = {1, 3, 15, 11, 2};
+    final int[] arrB = {23, 127, 235, 19, 8};
+    getMergedElementListAndSort(arrA, arrB);
   }
 
   public static int getMinDiffOfArrays(int[] arrA, int[] arrB) {
@@ -34,4 +40,26 @@ public class Prob6 {
     return result;
   }
 
+  public static List<Prob6Element> getMergedElementListAndSort(int[] arrA, int[] arrB) {
+    List<Prob6Element> resultList = new ArrayList<Prob6Element>();
+    for (int e : arrA) {
+      resultList.add(new Prob6Element(0, e));
+    }
+    for (int e : arrB) {
+      resultList.add(new Prob6Element(1, e));
+    }
+    Collections.sort(resultList);
+    for (Prob6Element e : resultList) {
+      System.out.println(e);
+    }
+    return resultList;
+  }
+
+  /*public static int getMinDiffFromMergedElementList(List<Prob6Element> list) {
+    for (int i = 0; i < list.size() - 1; i++) {
+      list.get(i+1) - list.get(i);
+    }
+
+    return result;
+  }*/
 }
