@@ -16,7 +16,7 @@ public class Prob16_5Test {
 
   @Test
   public void 앱테스트() {
-    assertEquals(2, app.getZeroCount(app.createFactorial(5)));
+    assertEquals(1, app.getZeroCount(app.createFactorial(5)));
   }
 
   @Test

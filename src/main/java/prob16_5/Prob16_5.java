@@ -16,6 +16,11 @@ public class Prob16_5 {
   }
 
   public int getZeroCount(long num) {
-    return 0;
+    int count = 0;
+    while(num % 10 == 0) {
+      count++;
+      num /= 10;
+    }
+    return count;
   }
 }
