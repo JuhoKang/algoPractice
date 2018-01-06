@@ -18,8 +18,10 @@ public class Prob16_5Test {
   public void 앱테스트() {
     assertEquals(1, app.getZeroCount(app.createFactorial(5)));
     assertEquals(1, app.countFiveCountUnder(5));
-    assertEquals(31, app.countFiveCountUnder(155));
-    //assertEquals(31, app.getZeroCount(app.createFactorial(155)));
+    assertEquals(3, app.countFiveCountUnder(15));
+    assertEquals(6, app.countFiveCountUnder(25));
+    assertEquals(24, app.countFiveCountUnder(100));
+    assertEquals(31, app.countFiveCountUnder(125));
   }
 
   @Test
@@ -37,7 +39,15 @@ public class Prob16_5Test {
     assertEquals(0, app.countFiveCountUnder(4));
     assertEquals(1, app.countFiveCountUnder(5));
     assertEquals(3, app.countFiveCountUnder(15));
-    assertEquals(31, app.countFiveCountUnder(155));
+  }
+
+  @Test
+  public void 해당_숫자_오로_몇번나눌수있는가() {
+    assertEquals(0, app.howManyFiveDivides(4));
+    assertEquals(1, app.howManyFiveDivides(5));
+    assertEquals(1, app.howManyFiveDivides(10));
+    assertEquals(2, app.howManyFiveDivides(100));
+    assertEquals(3, app.howManyFiveDivides(125));
   }
 
 }
