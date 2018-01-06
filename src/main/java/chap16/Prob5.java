@@ -1,8 +1,8 @@
-package prob16_5;
+package chap16;
 
 import java.util.Scanner;
 
-public class Prob16_5 {
+public class Prob5 {
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);

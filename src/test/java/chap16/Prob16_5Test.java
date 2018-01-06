@@ -1,17 +1,17 @@
-package prob16_5;
+package chap16;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class Prob16_5Test {
+public class Prob5Test {
 
-  private Prob16_5 app;
+  private Prob5 app;
 
   @Before
   public void init() {
-    app = new Prob16_5();
+    app = new Prob5();
   }
 
   @Test
