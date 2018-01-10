@@ -4,13 +4,17 @@ import java.util.Scanner;
 
 public class Prob1 {
 
-  public Prob1() {
+  public static void main(String[] args) {
+    Prob1 app = new Prob1();
     Scanner sc = new Scanner(System.in);
     int input = sc.nextInt();
-    System.out.println(getClimbCountOf(input, new int[input+1]));
+    System.out.println(app.getClimbCountOf(input));
   }
 
-  public int getClimbCountOf(int n, int[] cache) {
+  public Prob1() {
+  }
+
+  public long getClimbCountOf(long n) {
     if (n < 1) {
       return 0;
     } else if (n < 3) {
@@ -18,14 +22,19 @@ public class Prob1 {
     } else if (n == 3) {
       return 4;
     }
-    if(cache[n] == 0) {
-      cache[n] = getClimbCountOf(n-1, cache) + getClimbCountOf(n-2, cache) + getClimbCountOf(n-3, cache);
-    }
-    return cache[n];
-  }
 
-  public int getClimbCountOf(int n) {
-    return getClimbCountOf(n, new int[n+1]);
+    int result = 0;
+    int a = 1;
+    int b = 2;
+    int c = 4;
+    for (int i = 0; i < n - 3; i++) {
+      int temp1 = c;
+      c = a + b + c;
+      a = b;
+      b = temp1;
+    }
+
+    return c;
   }
 
 }
